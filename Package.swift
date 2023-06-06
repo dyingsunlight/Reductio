@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.7
 /**
  This file is part of the Reductio package.
  (c) Sergio Fernández <fdz.sergio@gmail.com>
