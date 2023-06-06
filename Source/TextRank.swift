@@ -57,7 +57,7 @@ internal final class TextRank<T: Hashable> {
         if current == nodes { return true }
 
         let total: Float = nodes.reduce(0.0) {
-            return $0 + pow(current[$1.0] - $1.1, 2)
+            return $0 + pow(current[$1.0]! - $1.1, 2)
         }
         return sqrtf(total/current.count) < convergence
     }
