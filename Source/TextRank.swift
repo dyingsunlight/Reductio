@@ -46,7 +46,7 @@ internal final class TextRank<T: Hashable> {
     private func iteration(_ nodes: Node) -> Node {
         var vertex = Node()
         for (node, links) in graph {
-            let score: Float = links.reduce(0.0) { $0 + nodes[$1] / outlinks[$1] * weights[$1, node] }
+            let score: Float = links.reduce(0.0) { $0 + nodes[$1]! / outlinks[$1]! * weights[$1, node] }
             vertex[node] = (1-damping/nodes.count) + damping * score
         }
         return vertex
